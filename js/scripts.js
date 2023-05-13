@@ -1,9 +1,9 @@
 
 function resposta(){
     
-    let Q1 = document.getElementById("p1").checked;
-    let Q2 = document.getElementById("p2").checked;
-    let Q3 = document.getElementById("p3").checked;
+    let Q1 = document.getElementById("p1").value;
+    let Q2 = document.getElementById("p2").value;
+    let Q3 = document.getElementById("p3").value;
     
     let R1 = document.getElementById("r1").checked;
     let R2 = document.getElementById("r2").checked;
@@ -13,17 +13,16 @@ function resposta(){
 
 
 
-    if ((Q1 != undefined) && (Q2 != undefined) && (Q3 != undefined)){
-        envia();
+   let teste = (Q1) && (Q2) && (Q3);
+    let teste2 = (R1 == true) || (R2 == true) || (R3 == true) || (R4 == true) || (R5 == true);
+    
+    if ((teste) && (teste2)){
+            envia();
     }else{
         alert("Preencha todos os campos!");
-    }if((R1 == true) || (R2 == true) || (R3 == true) || (R4 == true) || (R5 == true) ){
-        envia();
-    }else{
-        alert("Preencha todos os campos!");
+       
     }
     
-   
     
 }
 
